@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تحقق أمني</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="cf-turnstile"
+       data-sitekey="0x4AAAAAAEJp1NPibtOC8ok_"
+       data-callback="onSuccess"></div>
+  <script>
+    function onSuccess(token) {
+      TurnstileChannel.postMessage(token);
+    }
+  </script>
+</body>
+  </html>
